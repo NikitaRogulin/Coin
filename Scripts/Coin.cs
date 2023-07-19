@@ -20,7 +20,7 @@ public class Coin : MonoBehaviour
         SaveMaterial();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Rotate();
     }
@@ -54,7 +54,7 @@ public class Coin : MonoBehaviour
 
     private Vector3 GetSpeed()
     {
-        var speed = Mathf.Sin(Time.time / _deltaT) * _rotationSpeed;
+        var speed = Mathf.Sin(Time.time / _deltaT) * _rotationSpeed ;
         return new Vector3(0, 0, speed);
     }
 }
